@@ -18,14 +18,14 @@ app.add_middleware(
 )
 
 # Load class names for bird classification
-with open('app/bird_list_classes.json', 'r') as file:
+with open('bird_list_classes.json', 'r') as file:
     classes = json.load(file)
 
 size = 299
 img_size = (size, size)
 
 # Load TFLite model
-with open('app/40classesModel.tflite', 'rb') as f:
+with open('40classesModel.tflite', 'rb') as f:
     tflite_model = f.read()
 
 # Convert TFLite model to interpreter
